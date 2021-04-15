@@ -20,9 +20,9 @@ function createPhotoMap () {
   var map = L.map('map').setView([39.47705256789492, -111.73427101479656], 7);
   
   // create basemap object. See examples at https://leaflet-extras.github.io/leaflet-providers/preview/
-  var basemap = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}', {
+  var Esri_NatGeoWorldMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
   	maxZoom: 16,
-  	attribution: 'USGS'
+  	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC'
   }).addTo(map);
   
   // use Papa Parse (papaparse.com) to get the Google Sheets CSV
